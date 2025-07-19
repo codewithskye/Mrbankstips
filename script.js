@@ -1001,12 +1001,12 @@ window.closeGreetingPopup = function() {
     }
 };
 
-// document.addEventListener("contextmenu", e => e.preventDefault());
-// document.addEventListener("keydown", e => {
-//     if (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S")) {
-//         e.preventDefault();
-//     }
-//     if (e.keyCode === 123) {
-//         e.preventDefault();
-//     }
-// });
+document.addEventListener("contextmenu", e => e.preventDefault());
+document.addEventListener("keydown", e => {
+    if (e.ctrlKey && (e.key === "u" || e.key === "U" || e.key === "s" || e.key === "S")) {
+        e.preventDefault();
+    }
+    if (e.keyCode === 123) {
+        e.preventDefault();
+    }
+});
