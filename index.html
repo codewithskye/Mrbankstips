@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MrbanksTips247 - Professional sports betting tips and predictions for football, tennis, and basketball. Get expert picks and live scores.">
+    <meta name="keywords" content="sports betting, football tips, tennis predictions, basketball picks, live scores, betting odds">
+    <meta name="author" content="MrbanksTips247">
+    <title>MrbanksTips247 - Professional Sports Betting Tips & Predictions</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Loader -->
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="sports-icons">
+                <i class='bx bx-football rotating-icon'></i>
+                <i class='bx bx-tennis-ball rotating-icon'></i>
+                <i class='bx bxs-basketball rotating-icon'></i>
+            </div>
+            <h1 class="loader-text">MrbanksTips</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Greeting Popup -->
+    <div id="greetingPopup" class="greeting-popup">
+        <div class="greeting-card">
+            <button class="greeting-close" onclick="closeGreetingPopup()" aria-label="Close greeting popup">
+                <i class='bx bx-x'></i>
+            </button>
+            <div class="greeting-icon">
+                <i class='bx bx-sun'></i>
+            </div>
+            <h2 class="greeting-title">Good Morning Hero!</h2>
+            <p class="greeting-quote">"Success is where preparation and opportunity meet."</p>
+            <p class="greeting-author">- Bobby Unser</p>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MrbanksTips</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#matches" class="nav-link cta-btn">Get Picks</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero scroll-section" id="hero">
+        <div class="hero-content animate-element">
+            <h1 class="hero-title">Professional Sports Betting Tips</h1>
+            <p class="hero-subtitle">Get free expert predictions and live scores for football, tennis, and basketball</p>
+            <div class="hero-buttons">
+                <a href="#matches" class="btn btn-primary">View Today's Tips</a>
+                <a href="https://t.me/MrBanksFreeChannel" class="btn btn-secondary">Join Us on Telegram</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero Stats Section -->
+    <section class="hero-stats-section">
+        <div class="container">
+            <div class="hero-stats animate-element">
+                <div class="stat-item">
+                    <h3>95%</h3>
+                    <p>Win Rate</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10000+</h3>
+                    <p>Happy Families</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live News Ticker -->
+    <section class="news-ticker">
+        <div class="ticker-container">
+            <div class="ticker-label">Latest News:</div>
+            <div class="ticker-content" id="news-ticker">
+                <span>Loading latest football news...</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Match Tables Section -->
+    <section class="matches-section scroll-section animate-element" id="matches">
+        <div class="container">
+            <h2 class="section-title">Today's Matches & Tips</h2>
+            
+            <!-- Sport Toggle Buttons -->
+            <div class="sport-toggles">
+                <button class="sport-btn active" data-sport="soccer">
+                    <i class='bx bxs-football'></i>
+                    Soccer
+                </button>
+                <button class="sport-btn" data-sport="tennis">
+                    <i class='bx bx-tennis-ball'></i>
+                    Tennis
+                </button>
+                <button class="sport-btn" data-sport="basketball">
+                    <i class='bx bxs-basketball'></i>
+                    Basketball
+                </button>
+            </div>
+
+            <!-- Date Filter Buttons -->
+            <div class="date-filters">
+                <button class="date-btn active" data-date="today">Today</button>
+                <button class="date-btn" data-date="yesterday">Yesterday</button>
+                <button class="date-btn" data-date="2days">2 Days Ago</button>
+                <button class="date-btn" data-date="3days">3 Days Ago</button>
+            </div>
+
+            <!-- Match Table -->
+            <div class="table-container">
+                <table class="matches-table" id="matches-table">
+                    <thead>
+                        <tr>
+                            <th>Time</th>
+                            <th>Home</th>
+                            <th>Away</th>
+                            <th>1X2</th>
+                            <th>Score</th>
+                            <th>Odds</th>
+                            <th>Result</th>
+                        </tr>
+                    </thead>
+                    <tbody id="matches-tbody">
+                        <!-- Matches will be populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Live Scores Section -->
+    <section class="live-scores scroll-section animate-element">
+        <div class="container">
+            <h2 class="section-title">Live Scores</h2>
+            <div class="scores-grid" id="live-scores">
+                <!-- Live scores shouldd be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest News Section -->
+    <section class="latest-news scroll-section animate-element">
+        <div class="container">
+            <h2>Latest Football News</h2>
+            <div class="news-grid" id="latest-news-grid">
+                <div class="news-loading">
+                    <i class='bx bx-loader-alt bx-spin'></i>
+                    <p>Loading latest football news...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I start receiving your tips?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It’s simple! Follow our official Telegram channel or visit our website regularly. All tips are shared publicly and completely free. No payments is required.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are your betting tips really free?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! MrBanksTips247.com does not charge for tips. We believe in helping people win smarter, not charging them for predictions. Beware of anyone asking you to pay. THEY ARE SCAM!!!</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What sports do you cover?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide expert tips for a wide variety of sports including football, tennis, basketball, horse racing, baseball, table tennis, cycling, motorsport, dog racing, handball, and hockey.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Where do you post tips?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our tips are shared directly on our official Telegram channel, X or website. Make sure you follow only our official links to avoid fake accounts.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer any kind of VIP or paid plan?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. We do not offer any VIP or premium packages. All our content is freely available to everyone. If anyone claims to sell VIP access using our name, they are impersonators.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I trust this account?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — if you’re on MrBanksTips247.com or our verified Telegram channel. Always double-check and avoid anyone claiming to be “MrBanks” with different usernames.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What should I do if someone contacts me claiming to be MrBanks?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Block and report them immediately. Do not send money or share your personal information. We never DM users for money, all our updates and tips are shared publicly and for free.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can beginners benefit from your tips?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Whether you're new to betting or already experienced, our tips are easy to understand and backed by solid analysis, making them suitable for all levels.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How are your tips generated?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We combine expert analysis, match statistics, algorithms, and real-time insights to deliver well-informed predictions. It’s all about strategy and teamwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose MrbanksTips?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class='bx bx-trophy'></i>
+                    <h3>Expert Analysis</h3>
+                    <p>Professional sports analysts with years of experience</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-time-five'></i>
+                    <h3>Real-time Updates</h3>
+                    <p>Live scores and instant match result notifications</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-shield-check'></i>
+                    <h3>Proven Track Record</h3>
+                    <p>95% success rate with transparent results</p>
+                </div>
+                <div class="feature-card">
+                    <i class='bx bx-support'></i>
+                    <h3>24/7 Support</h3>
+                    <p>Round-the-clock customer support and assistance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sports Tips</h3>
+                    <ul>
+                        <li><a href="index.html">Soccer Tips</a></li>
+                        <li><a href="index.html">Tennis Predictions</a></li>
+                        <li><a href="index.html">Basketball Tips</a></li>
+                        <li><a href="index.html">Live Scores</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Knowledge Base</a></li>
+                        <li><a href="contact.html">Betting Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="https://t.me/mrbankstips">Live Chat</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="policy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/MrBanksFreeChannel" class="social-link"><i class='bx bxl-telegram'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://x.com/mrbankstips?s=21" class="social-link"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-gmail'></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class='bx bx-send'></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 MrbanksTips247. All rights reserved.</p>
+                    <p>🔞 Responsible betting is key. Risk only what you can afford to lose. Strictly for 18+ users.</p>
+                    <p>💻 Developed by <a style="color: white;" href="https://codewithskye.github.io" target="_blank" rel="noopener noreferrer">CodeWithSkye</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<!-- AI Assistant Bot -->
+<div class="ai-assistant" id="ai-assistant">
+    <div class="assistant-toggle" id="assistant-toggle">
+        <i class='bx bx-bot'></i>
+    </div>
+    <div class="assistant-chat" id="assistant-chat">
+        <div class="chat-header">
+            <h4>AI Assistant</h4>
+            <button class="close-chat" id="close-chat">
+                <i class='bx bx-x'></i>
+            </button>
+        </div>
+        <div class="chat-messages" id="chat-messages">
+            <div class="message bot-message">
+                <p>Hello! I'm here to help you with betting tips, bookmaker recommendations, and site navigation. How can I assist you today?</p>
+            </div>
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Ask me anything...">
+            <button id="send-message">
+                <i class='bx bx-send'></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

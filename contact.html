@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact MrbanksTips247 - Get in touch for premium betting tips and support">
+    <meta name="keywords" content="contact, support, betting tips, sports predictions, customer service">
+    <meta name="author" content="MrbanksTips247">
+    <title>Contact Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="loader-content">
+            <div class="sports-icons">
+                <i class='bx bx-football rotating-icon'></i>
+                <i class='bx bx-tennis-ball rotating-icon'></i>
+                <i class='bx bxs-basketball rotating-icon'></i>
+            </div>
+            <h1 class="loader-text">MrbanksTips</h1>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MrbanksTips</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#matches" class="nav-link cta-btn">Get Picks</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <div class="contact-hero-content">
+                <h1 class="contact-title">Get In Touch</h1>
+                <p class="contact-subtitle">Ready to start winning?</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="form-header">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours</p>
+                    </div>
+                    
+                    <form class="contact-form" action="https://formspree.io/f/mzzvbzog" method="POST" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <i class='bx bx-user'></i>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <i class='bx bx-user'></i>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number (Optional)</label>
+                            <input type="tel" id="phone" name="phone">
+                            <i class='bx bx-phone'></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a subject</option>
+                                <option value="general">General Inquiry</option>
+                                <option value="tips">Premium Tips</option>
+                                <option value="support">Technical Support</option>
+                                <option value="partnership">Partnership</option>
+                                <option value="feedback">Feedback</option>
+                            </select>
+                            <i class='bx bx-category'></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="6" placeholder="Tell us how we can help you..." required></textarea>
+                            <i class='bx bx-message-detail'></i>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" name="newsletter">
+                            <label for="newsletter">Subscribe to our newsletter for exclusive tips and updates</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                            <i class='bx bx-send'></i>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class='bx bx-map'></i>
+                        </div>
+                        <h3>Our Location</h3>
+                        <p>Nigeria.</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class='bx bx-phone'></i>
+                        </div>
+                        <h3>My primary telegram handle</h3>
+                        <p>@Mrbankstips</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class='bx bx-envelope'></i>
+                        </div>
+                        <h3>Backup telegram handle</h3>
+                        <p><br>@Banks_220</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class='bx bx-time'></i>
+                        </div>
+                        <h3>For Adverts, Business-proposals or inquiries</h3>
+                        <p>DM @Mrbankstips</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media Section -->
+    <section class="social-section">
+        <div class="container">
+            <div class="social-content">
+                <h2>Connect With Us</h2>
+                <p>Follow us on social media for daily tips, live updates, and exclusive content</p>
+                
+                <div class="social-grid">
+                    <a href="#" class="social-card telegram">
+                        <div class="social-icon">
+                            <i class='bx bxl-telegram'></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>Telegram</h3>
+                            <p>Join our FREE channel for exclusive tips</p>
+                            <span class="social-handle">@Mrbankstips</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="social-card whatsapp">
+                        <div class="social-icon">
+                            <i class='bx bxl-whatsapp'></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>WhatsApp</h3>
+                            <p>Get instant support</p>
+                            <span class="social-handle">+234-000-000-00</span>
+                        </div>
+                    </a>
+                    
+                    <a href="https://x.com/Mrbankstips" class="social-card twitter">
+                        <div class="social-icon">
+                            <i class='bx bxl-twitter'></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>Twitter / X</h3>
+                            <p>Follow for live updates and analysis</p>
+                            <span class="social-handle">@Mrbankstips</span>
+                        </div>
+                    </a>
+                    
+                    <a href="#" class="social-card gmail">
+                        <div class="social-icon">
+                            <i class='bx bxl-gmail'></i>
+                        </div>
+                        <div class="social-info">
+                            <h3>Email</h3>
+                            <p>Direct email for business inquiries</p>
+                            <span class="social-handle">skyedesignssd@gmail.com</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I start receiving your tips?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It’s simple! Follow our official Telegram channel or visit our website regularly. All tips are shared publicly and completely free. No payments is required.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are your betting tips really free?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! MrBanksTips247.com does not charge for tips. We believe in helping people win smarter, not charging them for predictions. Beware of anyone asking you to pay. THEY ARE SCAM!!!</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What sports do you cover?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We provide expert tips for a wide variety of sports including football, tennis, basketball, horse racing, baseball, table tennis, cycling, motorsport, dog racing, handball, and hockey.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Where do you post tips?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>All our tips are shared directly on our official Telegram channel, X or website. Make sure you follow only our official links to avoid fake accounts.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer any kind of VIP or paid plan?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No. We do not offer any VIP or premium packages. All our content is freely available to everyone. If anyone claims to sell VIP access using our name, they are impersonators.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I trust this account?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes — if you’re on MrBanksTips247.com or our verified Telegram channel. Always double-check and avoid anyone claiming to be “MrBanks” with different usernames.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What should I do if someone contacts me claiming to be MrBanks?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Block and report them immediately. Do not send money or share your personal information. We never DM users for money, all our updates and tips are shared publicly and for free.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can beginners benefit from your tips?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Whether you're new to betting or already experienced, our tips are easy to understand and backed by solid analysis, making them suitable for all levels.</p>
+                    </div>
+                </div>
+    
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How are your tips generated?</h3>
+                        <i class='bx bx-plus'></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We combine expert analysis, match statistics, algorithms, and real-time insights to deliver well-informed predictions. It’s all about strategy and teamwork.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Sports Tips</h3>
+                    <ul>
+                        <li><a href="index.html">Soccer Tips</a></li>
+                        <li><a href="index.html">Tennis Predictions</a></li>
+                        <li><a href="index.html">Basketball Tips</a></li>
+                        <li><a href="index.html">Live Scores</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Support</a></li>
+                        <li><a href="contact.html">Knowledge Base</a></li>
+                        <li><a href="contact.html">Betting Guide</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="https://t.me/mrbankstips">Live Chat</a></li>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="policy.html">Privacy Policy</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Connect With Us</h3>
+                    <div class="social-links">
+                        <a href="https://t.me/MrBanksFreeChannel" class="social-link"><i class='bx bxl-telegram'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://x.com/mrbankstips?s=21" class="social-link"><i class='bx bxl-twitter'></i></a>
+                        <a href="#" class="social-link"><i class='bx bxl-gmail'></i></a>
+                    </div>
+                    <div class="newsletter">
+                        <h4>Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Your email" required>
+                            <button type="submit"><i class='bx bx-send'></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 MrbanksTips247. All rights reserved.</p>
+                    <p>🔞 Responsible betting is key. Risk what you can afford to lose. Strictly for 18+</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AI Assistant -->
+    <div class="ai-assistant" id="ai-assistant">
+        <div class="assistant-toggle" id="assistant-toggle">
+            <i class='bx bx-bot'></i>
+        </div>
+        <div class="assistant-chat" id="assistant-chat">
+            <div class="chat-header">
+                <h4>AI Assistant</h4>
+                <button class="close-chat" id="close-chat">
+                    <i class='bx bx-x'></i>
+                </button>
+            </div>
+            <div class="chat-messages" id="chat-messages">
+                <div class="message bot-message">
+                    <p>Hello! I'm here to help you with betting tips, bookmaker recommendations, and site navigation. How can I assist you today?</p>
+                </div>
+            </div>
+            <div class="chat-input">
+                <input type="text" id="user-input" placeholder="Ask me anything...">
+                <button id="send-message">
+                    <i class='bx bx-send'></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>    
+    <script>
+        // Toast notification function
+        function showToast(message, type = 'success') {
+            const existingToast = document.querySelector('.toast');
+            if (existingToast) {
+                existingToast.remove();
+            }
+            
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <i class='bx ${type === 'success' ? 'bx-check-circle' : 'bx-error-circle'}'></i>
+                <div class="toast-content">
+                    <div class="toast-title">${type === 'success' ? 'Success!' : 'Error!'}</div>
+                    <div class="toast-message">${message}</div>
+                </div>
+                <button class="toast-close" onclick="this.parentElement.remove()">
+                    <i class='bx bx-x'></i>
+                </button>
+            `;
+            
+            document.body.appendChild(toast);
+            
+            // Show toast
+            setTimeout(() => {
+                toast.classList.add('show');
+            }, 100);
+            
+            // Auto remove after 5 seconds
+            setTimeout(() => {
+                if (toast.parentElement) {
+                    toast.classList.remove('show');
+                    setTimeout(() => {
+                        if (toast.parentElement) {
+                            toast.remove();
+                        }
+                    }, 300);
+                }
+            }, 5000);
+        }
+        
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoading = submitBtn.querySelector('.btn-loading');
+            
+            // Show loading state
+            btnText.style.display = 'none';
+            btnLoading.style.display = 'inline';
+            submitBtn.disabled = true;
+            
+            try {
+                const formData = new FormData(this);
+                const response = await fetch(this.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                if (response.ok) {
+                    showToast('Thank you for your message! We\'ll get back to you within 24 hours.', 'success');
+                    this.reset(); // Clear the form
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            } catch (error) {
+                showToast('Sorry, there was an error sending your message. Please try again.', 'error');
+            } finally {
+                // Reset button state
+                btnText.style.display = 'inline';
+                btnLoading.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Admin Dashboard - MrbanksTips247 Match Management">
+    <title>Admin Dashboard - MrbanksTips247</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Anton&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>MrbanksTips</h2>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="blog.html" class="nav-link">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+                <li class="nav-item nav-cta-mobile">
+                    <a href="#" class="cta-btn">Get Picks</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="admin-container">
+        <div class="admin-header">
+            <h1 class="section-title">Admin Dashboard</h1>
+            <p>Manage matches, predictions, and site content</p>
+        </div>
+
+        <!-- Add Match Form -->
+        <div class="admin-form">
+            <h3>Add New Match</h3>
+            <form id="match-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="sport">Sport</label>
+                        <select id="sport" name="sport" required>
+                            <option value="soccer">Soccer</option>
+                            <option value="tennis">Tennis</option>
+                            <option value="basketball">Basketball</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <select id="date" name="date" required>
+                            <option value="today">Today</option>
+                            <option value="yesterday">Yesterday</option>
+                            <option value="2days">2 Days Ago</option>
+                            <option value="3days">3 Days Ago</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="home">Home Team</label>
+                        <input type="text" id="home" name="home" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="away">Away Team</label>
+                        <input type="text" id="away" name="away" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prediction">Prediction</label>
+                        <input type="text" id="prediction" name="prediction" placeholder="e.g., Home Win, Over 2.5 Goals, BTTS" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="odds">Odds</label>
+                        <input type="number" id="odds" name="odds" step="0.01" min="1.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="score">Score (optional)</label>
+                        <input type="text" id="score" name="score" placeholder="e.g., 2-1 or leave empty">
+                    </div>
+                </div>
+                <button type="submit" class="admin-btn">
+                    <i class='bx bx-plus'></i>
+                    Add Match
+                </button>
+            </form>
+        </div>
+
+        <!-- Current Matches -->
+        <div class="admin-matches">
+            <h3>Current Matches</h3>
+            <div id="admin-matches-list">
+                <!-- Matches will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="admin-form">
+            <h3>Quick Actions</h3>
+            <div class="form-grid">
+                <button class="admin-btn" onclick="clearAllMatches()">
+                    <i class='bx bx-trash'></i>
+                    Clear All Matches
+                </button>
+                <button class="admin-btn" onclick="generateSampleData()">
+                    <i class='bx bx-data'></i>
+                    Generate Sample Data
+                </button>
+                <button class="admin-btn" onclick="exportMatches()">
+                    <i class='bx bx-download'></i>
+                    Export Matches
+                </button>
+                <button class="admin-btn" onclick="refreshLiveScores()">
+                    <i class='bx bx-refresh'></i>
+                    Refresh Live Scores
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <div class="admin-form">
+            <h3>Statistics</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Total Matches</h4>
+                    <p id="total-matches">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Live Matches</h4>
+                    <p id="live-matches">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Finished Matches</h4>
+                    <p id="finished-matches">0</p>
+                </div>
+                <div class="stat-card">
+                    <h4>Success Rate</h4>
+                    <p id="success-rate">95%</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
